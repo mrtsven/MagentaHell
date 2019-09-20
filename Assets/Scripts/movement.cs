@@ -6,12 +6,13 @@ public class movement : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent;
     public UnityEngine.Camera cam;
+    public Rigidbody rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,11 @@ public class movement : MonoBehaviour
             {
                 agent.SetDestination(hit.point);
             }
+        }
+
+        if(GameObject.FindGameObjectsWithTag("Limb").Length == 6) {
+            Debug.Log("Fly away to magenta heaven");
+            rb.MovePosition(transform.position + transform.up * Time.fixedDeltaTime);
         }
     }
 }

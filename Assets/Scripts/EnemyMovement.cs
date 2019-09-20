@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public Transform target;
     public int moveSpeed;
@@ -30,8 +30,6 @@ public class Movement : MonoBehaviour
     {
 
         float distance = Vector3.Distance(target.transform.position, transform.position);
-
-        Debug.Log(distance);
         
         if (distance < 10)
         {
