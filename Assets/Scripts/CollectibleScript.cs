@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CollectibleScript : MonoBehaviour
 {
+    public GameObject limb;
+    
     private void OnCollisionEnter(Collision other) {
-        transform.gameObject.SetActive(false);
+        if(other.gameObject.tag == "Player"){
+            transform.gameObject.SetActive(false);
+        }
     }
 }

@@ -339,7 +339,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69cf33729a8d04346bc7cb0dd3c30ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limb: {fileID: 0}
 --- !u!54 &1525369141
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -614,6 +615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 809994305094838732, guid: d16017e309b978c4da07c7bdd4c0422c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5567496840218412134, guid: d16017e309b978c4da07c7bdd4c0422c,
         type: 3}
